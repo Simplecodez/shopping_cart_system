@@ -1,6 +1,6 @@
 services:
   redis:
-    container_name: pixavus-redis
+    container_name: shopping-cart-redis
     image: redis:latest
     restart: always
     ports:
