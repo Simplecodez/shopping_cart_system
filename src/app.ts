@@ -29,6 +29,9 @@ export class App {
   }
 
   private initializeRoutes() {
+    this.app.get('/', (req, res) => {
+      res.send('Hello amd welcome');
+    });
     this.app.use('/api/v1/auth', this.authRouter.getRouter);
     this.app.use('/api/v1/carts', this.cartRouter.getRouter);
     this.app.use('/api/v1/products', this.productRouter.getRouter);
