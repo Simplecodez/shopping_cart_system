@@ -12,7 +12,7 @@ export const addItemToCartValidationSchema = Joi.object({
     })
     .required()
     .error(new AppError('Invalid resource ID', 400, 'INVALID_RS_ID')),
-  quantity: Joi.number().integer().max(40).required()
+  quantity: Joi.number().integer().min(1).max(40).required()
 });
 
 export const updateItemQuantityValidationSchema = Joi.object({
